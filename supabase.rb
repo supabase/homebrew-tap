@@ -5,43 +5,55 @@
 class Supabase < Formula
   desc "Supabase CLI"
   homepage "https://supabase.io"
-  version "0.10.5"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/supabase/cli/releases/download/v0.10.5/supabase_0.10.5_darwin_arm64.tar.gz"
-      sha256 "494d7183fe2475a68cdca15f59751b273d6e3d999d0d9c08189c497dd9a93fea"
+      url "https://github.com/supabase/cli/releases/download/v0.11.0/supabase_0.11.0_darwin_arm64.tar.gz"
+      sha256 "ceaf775250be8bcbc3f512d6e8bc1f726a2638418fe2c35271d7ad787f8f8de9"
 
       def install
         bin.install "supabase"
+        (bash_completion/"supabase").write `#{bin}/supabase completion bash`
+        (fish_completion/"supabase.fish").write `#{bin}/supabase completion fish`
+        (zsh_completion/"_supabase").write `#{bin}/supabase completion zsh`
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/supabase/cli/releases/download/v0.10.5/supabase_0.10.5_darwin_amd64.tar.gz"
-      sha256 "29ef557096fe0d63dca162bff32a2ad658f4144c21ff44b12d157a1c1345f9cb"
+      url "https://github.com/supabase/cli/releases/download/v0.11.0/supabase_0.11.0_darwin_amd64.tar.gz"
+      sha256 "9724dea50265c4269c7cf85b37893d7ebb42e71413a41ff1015869157fc685f3"
 
       def install
         bin.install "supabase"
+        (bash_completion/"supabase").write `#{bin}/supabase completion bash`
+        (fish_completion/"supabase.fish").write `#{bin}/supabase completion fish`
+        (zsh_completion/"_supabase").write `#{bin}/supabase completion zsh`
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/supabase/cli/releases/download/v0.10.5/supabase_0.10.5_linux_amd64.tar.gz"
-      sha256 "e3bbd6b7b82207f245f34716da7ae5ca97c2e81bdbcdb8069cc4c04d40c07dd6"
+      url "https://github.com/supabase/cli/releases/download/v0.11.0/supabase_0.11.0_linux_amd64.tar.gz"
+      sha256 "93a3ec5b6a414b6ee8d4802a374b4c516074be5a376ec521f84573ba43d7f9c7"
 
       def install
         bin.install "supabase"
+        (bash_completion/"supabase").write `#{bin}/supabase completion bash`
+        (fish_completion/"supabase.fish").write `#{bin}/supabase completion fish`
+        (zsh_completion/"_supabase").write `#{bin}/supabase completion zsh`
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/supabase/cli/releases/download/v0.10.5/supabase_0.10.5_linux_arm64.tar.gz"
-      sha256 "300e43393181b4986e7b90a000b76314f5ccff647673c58fe18e630505f57d1a"
+      url "https://github.com/supabase/cli/releases/download/v0.11.0/supabase_0.11.0_linux_arm64.tar.gz"
+      sha256 "b739d823d634361b55043733fb83aa68d99e1ce934df0a579413f73e0ade52e2"
 
       def install
         bin.install "supabase"
+        (bash_completion/"supabase").write `#{bin}/supabase completion bash`
+        (fish_completion/"supabase.fish").write `#{bin}/supabase completion fish`
+        (zsh_completion/"_supabase").write `#{bin}/supabase completion zsh`
       end
     end
   end

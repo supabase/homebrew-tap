@@ -5,13 +5,13 @@
 class Supabase < Formula
   desc "Supabase CLI"
   homepage "https://supabase.io"
-  version "0.24.9"
+  version "0.24.10"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/supabase/cli/releases/download/v0.24.9/supabase_0.24.9_darwin_arm64.tar.gz"
-      sha256 "e9fa85dc77a40e00a7874842efe7b32e73806016db58db0d4fa6288fa6e65d75"
+    if Hardware::CPU.intel?
+      url "https://github.com/supabase/cli/releases/download/v0.24.10/supabase_0.24.10_darwin_amd64.tar.gz"
+      sha256 "6a32c8ab6df8e6687d5fd44104c42c1a1280e82a9b9b809951ab28a1376f2ab5"
 
       def install
         bin.install "supabase"
@@ -20,9 +20,9 @@ class Supabase < Formula
         (zsh_completion/"_supabase").write `#{bin}/supabase completion zsh`
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/supabase/cli/releases/download/v0.24.9/supabase_0.24.9_darwin_amd64.tar.gz"
-      sha256 "5adc2dbd0fbbd1b68d89753debb41dfe8e244e03ef7007718ee4b12ae29466ab"
+    if Hardware::CPU.arm?
+      url "https://github.com/supabase/cli/releases/download/v0.24.10/supabase_0.24.10_darwin_arm64.tar.gz"
+      sha256 "757021672531df8014c33bb8e63a33a54caad659033ff7532108deec31df0f66"
 
       def install
         bin.install "supabase"
@@ -34,9 +34,9 @@ class Supabase < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/supabase/cli/releases/download/v0.24.9/supabase_0.24.9_linux_amd64.tar.gz"
-      sha256 "c0a1065b70daf4be36c29c84951284c492297342737a4fd0e70823ca28c9fc10"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/supabase/cli/releases/download/v0.24.10/supabase_0.24.10_linux_arm64.tar.gz"
+      sha256 "4b9126829619eb497522de47ad89b5c4d72568fd0fe0d965602023f2dd88e034"
 
       def install
         bin.install "supabase"
@@ -45,9 +45,9 @@ class Supabase < Formula
         (zsh_completion/"_supabase").write `#{bin}/supabase completion zsh`
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/supabase/cli/releases/download/v0.24.9/supabase_0.24.9_linux_arm64.tar.gz"
-      sha256 "e5c08a0b2387577c62054e2f01b7d61ea1369f425dfb3b9c637fadf184bb0e17"
+    if Hardware::CPU.intel?
+      url "https://github.com/supabase/cli/releases/download/v0.24.10/supabase_0.24.10_linux_amd64.tar.gz"
+      sha256 "612e3f1ce39e6321e352ba012373cf02d6bb19069ec9a8c8f3ef1c828c12e116"
 
       def install
         bin.install "supabase"

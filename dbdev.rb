@@ -4,21 +4,21 @@
 class Dbdev < Formula
   desc "Dbdev CLI"
   homepage "https://database.dev/"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/supabase/dbdev/releases/download/v0.1.4/dbdev-v0.1.4-macos-amd64.tar.gz"
-      sha256 "1a18ccd4bce9bc8699fec76b05c6c5864dfd7279abdfb43e5eb794f2efa3903e"
+      url "https://github.com/supabase/dbdev/releases/download/v0.1.5/dbdev-v0.1.5-macos-amd64.tar.gz"
+      sha256 "ee97c8aa153ee6474f85ba50029a9015818d006a239f85f39fba0a9c33a4ac8a"
 
       def install
         bin.install "dbdev"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/supabase/dbdev/releases/download/v0.1.4/dbdev-v0.1.4-macos-amd64.tar.gz"
-      sha256 "1a18ccd4bce9bc8699fec76b05c6c5864dfd7279abdfb43e5eb794f2efa3903e"
+      url "https://github.com/supabase/dbdev/releases/download/v0.1.5/dbdev-v0.1.5-macos-amd64.tar.gz"
+      sha256 "ee97c8aa153ee6474f85ba50029a9015818d006a239f85f39fba0a9c33a4ac8a"
 
       def install
         bin.install "dbdev"
@@ -28,16 +28,16 @@ class Dbdev < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/supabase/dbdev/releases/download/v0.1.4/dbdev-v0.1.4-linux-arm64.tar.gz"
-      sha256 "db5d722189995d24adfefde8517703bb995dc0f17629e27c6123b0a0253857b1"
+      url "https://github.com/supabase/dbdev/releases/download/v0.1.5/dbdev-v0.1.5-linux-arm64.tar.gz"
+      sha256 "a5e3f1d8695808ad54816d0bfb471d1c0399dcd53d9638d24a625eeefeb7cc7d"
 
       def install
         bin.install "dbdev"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/supabase/dbdev/releases/download/v0.1.4/dbdev-v0.1.4-linux-amd64.tar.gz"
-      sha256 "b4a1110262fdc6399078ed259d3ef1ce29bf7876261a786f7481adb438b992fd"
+      url "https://github.com/supabase/dbdev/releases/download/v0.1.5/dbdev-v0.1.5-linux-amd64.tar.gz"
+      sha256 "99ac4bb4627dd239c34656875eb54c72c7809b372e0ae05f7d5dffebc4ef9617"
 
       def install
         bin.install "dbdev"

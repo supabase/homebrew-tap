@@ -1,0 +1,3 @@
+supabase.rb @supabase/cli
+supabase-beta.rb @supabase/cli
+dbdev.rb @supabase/postgres

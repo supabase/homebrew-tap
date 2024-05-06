@@ -5,13 +5,13 @@
 class SupabaseBeta < Formula
   desc "Supabase CLI (Beta)"
   homepage "https://supabase.com"
-  version "1.166.1"
+  version "1.166.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/supabase/cli/releases/download/v1.166.1/supabase_darwin_arm64.tar.gz"
-      sha256 "1ed9f216b6bf38916542ec84c6dce3270eeb7e6aa3aa61b9ba5eae9252a5f0d0"
+      url "https://github.com/supabase/cli/releases/download/v1.166.2/supabase_darwin_arm64.tar.gz"
+      sha256 "7e89c8cbdff306525d7019bd680cf27a88436eccc7fa061473043753228d4652"
 
       def install
         bin.install "supabase"
@@ -21,8 +21,8 @@ class SupabaseBeta < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/supabase/cli/releases/download/v1.166.1/supabase_darwin_amd64.tar.gz"
-      sha256 "112049e244e14919caf8fe83398a06e398405975e4e05dc483176771c289288e"
+      url "https://github.com/supabase/cli/releases/download/v1.166.2/supabase_darwin_amd64.tar.gz"
+      sha256 "fdb811a9f4e8d4668c4bdca79991c0c131841597005552a45ac2de6f008b01c9"
 
       def install
         bin.install "supabase"
@@ -35,8 +35,8 @@ class SupabaseBeta < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/supabase/cli/releases/download/v1.166.1/supabase_linux_arm64.tar.gz"
-      sha256 "b8cd8deed355e36ed9bbf679a5e764d72f61207f35e7d401ae1353ab482dbe60"
+      url "https://github.com/supabase/cli/releases/download/v1.166.2/supabase_linux_arm64.tar.gz"
+      sha256 "60ba47389e01d8e21791074ac5e191d0b30d7e34411e43bbc28d140af392de72"
 
       def install
         bin.install "supabase"
@@ -46,8 +46,8 @@ class SupabaseBeta < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/supabase/cli/releases/download/v1.166.1/supabase_linux_amd64.tar.gz"
-      sha256 "a120f787ef099bdc72ab14c96dc1f5fc507c6d4291efbadc35c535057662d33c"
+      url "https://github.com/supabase/cli/releases/download/v1.166.2/supabase_linux_amd64.tar.gz"
+      sha256 "8c3b265e81d0294a74119ad0dd6863e2711eb6604a70c29fbe10a955ed54b0be"
 
       def install
         bin.install "supabase"

@@ -31,7 +31,7 @@ class SupabaseBeta < Formula
 
         # Install binary resources
         resource("postgres").stage do
-          bin.install Dir["bin/*"]
+          bin.install Dir.glob('bin/*', File::FNM_DOTMATCH) - %w[bin/. bin/..]
           share.install Dir["share/*"]
           lib.install Dir["lib/*"]
         end
@@ -80,7 +80,7 @@ class SupabaseBeta < Formula
 
         # Install binary resources
         resource("postgres").stage do
-          bin.install Dir["bin/*"]
+          bin.install Dir.glob('bin/*', File::FNM_DOTMATCH) - %w[bin/. bin/..]
           share.install Dir["share/*"]
           lib.install Dir["lib/*"]
         end
@@ -119,7 +119,7 @@ class SupabaseBeta < Formula
 
         # Install binary resources
         resource("postgres").stage do
-          bin.install Dir["bin/*"]
+          bin.install Dir.glob('bin/*', File::FNM_DOTMATCH) - %w[bin/. bin/..]
           share.install Dir["share/*"]
           lib.install Dir["lib/*"]
         end

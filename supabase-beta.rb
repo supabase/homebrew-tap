@@ -15,8 +15,8 @@ class SupabaseBeta < Formula
 
       # Additional resource for native binaries
       resource "postgres" do
-        url "https://nightly.link/supabase/postgres/actions/runs/21695713500/supabase-postgres-darwin-arm64.zip"
-        sha256 "dd86bfee4e777ce9e4bdcaaac22af0ad21e3e0f8c68030fb48cb9d143f5c6716"
+        url "https://nightly.link/supabase/postgres/actions/runs/21728058034/supabase-postgres-darwin-arm64.zip"
+        sha256 "39b7e977535c4064a1f082a09bd5a36981bf28f271869822c7b526ca5feeb6c0"
       end
       resource "postgrest" do
         url "https://github.com/PostgREST/postgrest/releases/download/v14.4/postgrest-v14.4-macos-aarch64.tar.xz"
@@ -60,8 +60,8 @@ class SupabaseBeta < Formula
 
       # Additional resource for native binaries
       resource "postgres" do
-        url "https://nightly.link/supabase/postgres/actions/runs/21695713500/supabase-postgres-linux-arm64.zip"
-        sha256 "6aca2a015ebb8be0245ba310f1751ac49d5c2fba2809eddf83545aad0696b89b"
+        url "https://nightly.link/supabase/postgres/actions/runs/21728058034/supabase-postgres-linux-arm64.zip"
+        sha256 "2c133d6fa1a833bf3ea2731ee9451f536079108c31ac72635f510b073552907c"
       end
       resource "auth" do
         url "https://github.com/supabase/auth/releases/download/v2.186.0/auth-v2.186.0-arm64.tar.gz"
@@ -99,8 +99,8 @@ class SupabaseBeta < Formula
 
       # Additional resource for native binaries
       resource "postgres" do
-        url "https://nightly.link/supabase/postgres/actions/runs/21695713500/supabase-postgres-linux-x64.zip"
-        sha256 "e6a5edba40f1aa693a80affd6fce57c2b39751cc6d04b9a33c6ebb4458edf0db"
+        url "https://nightly.link/supabase/postgres/actions/runs/21728058034/supabase-postgres-linux-x64.zip"
+        sha256 "7ac0e3391ccc2dab00500f119ceeeb2a8cf5a9a351a5d8e30e57fe888eecd054"
       end
       resource "auth" do
         url "https://github.com/supabase/auth/releases/download/v2.186.0/auth-v2.186.0-x86.tar.gz"

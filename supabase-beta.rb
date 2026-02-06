@@ -13,11 +13,31 @@ class SupabaseBeta < Formula
       url "https://github.com/supabase/cli/releases/download/v2.75.3/supabase_darwin_arm64.tar.gz"
       sha256 "9183b35a53301155e75e132a70386c73745a2cf9bf780938036a681adcae7d27"
 
+      # Additional resource for native binaries
+      resource "postgres" do
+        url "https://nightly.link/supabase/postgres/actions/runs/21728058034/supabase-postgres-darwin-arm64.zip"
+        sha256 "39b7e977535c4064a1f082a09bd5a36981bf28f271869822c7b526ca5feeb6c0"
+      end
+      resource "postgrest" do
+        url "https://github.com/PostgREST/postgrest/releases/download/v14.4/postgrest-v14.4-macos-aarch64.tar.xz"
+        sha256 "cd425a228700856c092f7cd5d84345b0e2517e5426dedb8c1d8dacb6805974e3"
+      end
+
       def install
         bin.install "supabase"
         (bash_completion/"supabase").write `#{bin}/supabase completion bash`
         (fish_completion/"supabase.fish").write `#{bin}/supabase completion fish`
         (zsh_completion/"_supabase").write `#{bin}/supabase completion zsh`
+
+        # Install binary resources
+        resource("postgres").stage do
+          bin.install Dir.glob("bin/*", File::FNM_DOTMATCH) - %w[bin/. bin/..]
+          share.install Dir["share/*"]
+          lib.install Dir["lib/*"]
+        end
+        resource("postgrest").stage do
+          bin.install "postgrest"
+        end
       end
     end
     if Hardware::CPU.intel?
@@ -38,22 +58,78 @@ class SupabaseBeta < Formula
       url "https://github.com/supabase/cli/releases/download/v2.75.3/supabase_linux_arm64.tar.gz"
       sha256 "66a453fb3a9b2e6289a89aded1eaa56fe075c3c65a02770ae52f5c3ac27aaa7f"
 
-      def install
-        bin.install "supabase"
-        (bash_completion/"supabase").write `#{bin}/supabase completion bash`
-        (fish_completion/"supabase.fish").write `#{bin}/supabase completion fish`
-        (zsh_completion/"_supabase").write `#{bin}/supabase completion zsh`
+      # Additional resource for native binaries
+      resource "postgres" do
+        url "https://nightly.link/supabase/postgres/actions/runs/21728058034/supabase-postgres-linux-arm64.zip"
+        sha256 "2c133d6fa1a833bf3ea2731ee9451f536079108c31ac72635f510b073552907c"
       end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/supabase/cli/releases/download/v2.75.3/supabase_linux_amd64.tar.gz"
-      sha256 "736390c7abb17528cd17e09b029cf921c3d4eaef62f8ae80a4785b5d5fd85bd3"
+      resource "auth" do
+        url "https://github.com/supabase/auth/releases/download/v2.186.0/auth-v2.186.0-arm64.tar.gz"
+        sha256 "61aa53ea5e2d7e4f50f2b10312c1e6b73e4767b753815239956082fdcc623270"
+      end
+      resource "postgrest" do
+        url "https://github.com/PostgREST/postgrest/releases/download/v14.4/postgrest-v14.4-ubuntu-aarch64.tar.xz"
+        sha256 "5223ef63716590ea4aa7bd9f0fbec43903dad090612f4e753a8eafcba295c0a9"
+      end
 
       def install
         bin.install "supabase"
         (bash_completion/"supabase").write `#{bin}/supabase completion bash`
         (fish_completion/"supabase.fish").write `#{bin}/supabase completion fish`
         (zsh_completion/"_supabase").write `#{bin}/supabase completion zsh`
+
+        # Install binary resources
+        resource("postgres").stage do
+          bin.install Dir.glob("bin/*", File::FNM_DOTMATCH) - %w[bin/. bin/..]
+          share.install Dir["share/*"]
+          lib.install Dir["lib/*"]
+        end
+        resource("auth").stage do
+          bin.install "auth"
+          share.install Dir["migrations"]
+        end
+        resource("postgrest").stage do
+          bin.install "postgrest"
+        end
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/supabase/cli/releases/download/v2.75.3/supabase_linux_amd64.tar.gz"
+      sha256 "736390c7abb17528cd17e09b029cf921c3d4eaef62f8ae80a4785b5d5fd85bd3"
+
+      # Additional resource for native binaries
+      resource "postgres" do
+        url "https://nightly.link/supabase/postgres/actions/runs/21728058034/supabase-postgres-linux-x64.zip"
+        sha256 "7ac0e3391ccc2dab00500f119ceeeb2a8cf5a9a351a5d8e30e57fe888eecd054"
+      end
+      resource "auth" do
+        url "https://github.com/supabase/auth/releases/download/v2.186.0/auth-v2.186.0-x86.tar.gz"
+        sha256 "2683b9549e922d0644621129fdabd7edb8b78c35274e133e61a3280ad9675161"
+      end
+      resource "postgrest" do
+        url "https://github.com/PostgREST/postgrest/releases/download/v14.4/postgrest-v14.4-linux-static-x86-64.tar.xz"
+        sha256 "3fc6e82c34a98a97df5ffafd86fbd7b9e21e03ef2d733d43e7ee6d0ce113568f"
+      end
+
+      def install
+        bin.install "supabase"
+        (bash_completion/"supabase").write `#{bin}/supabase completion bash`
+        (fish_completion/"supabase.fish").write `#{bin}/supabase completion fish`
+        (zsh_completion/"_supabase").write `#{bin}/supabase completion zsh`
+
+        # Install binary resources
+        resource("postgres").stage do
+          bin.install Dir.glob("bin/*", File::FNM_DOTMATCH) - %w[bin/. bin/..]
+          share.install Dir["share/*"]
+          lib.install Dir["lib/*"]
+        end
+        resource("auth").stage do
+          bin.install "auth"
+          share.install Dir["migrations"]
+        end
+        resource("postgrest").stage do
+          bin.install "postgrest"
+        end
       end
     end
   end

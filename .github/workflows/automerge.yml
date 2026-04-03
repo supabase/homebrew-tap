@@ -44,4 +44,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          gh pr merge -d -s "$PR_URL"
+          gh pr merge -d --auto -s "$PR_URL"

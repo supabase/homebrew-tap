@@ -9,11 +9,12 @@ class Dbdev < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/supabase/dbdev/releases/download/v0.1.7/dbdev-v0.1.7-macos-amd64.tar.gz"
-      sha256 "ad6aee6bbc8a2f6d447b90c80b7b9b5862ea9497cb21d8df39d023486cec1690"
+      url "https://github.com/supabase/dbdev/archive/refs/tags/v0.1.7.tar.gz"
+      sha256 "3c7c6dc09c6ef8e76a1e9132b9ba5a8eb60ce94271c16fa889c56df72a140121"
+      depends_on "rust" => :build
 
       def install
-        bin.install "dbdev"
+        system "cargo", "install", "--locked", "--root", prefix, "--path", "cli"
       end
     end
     if Hardware::CPU.intel?

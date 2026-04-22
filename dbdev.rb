@@ -9,16 +9,16 @@ class Dbdev < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/supabase/dbdev/releases/download/v0.1.7/dbdev-v0.1.7-macos-amd64.tar.gz"
-      sha256 "ad6aee6bbc8a2f6d447b90c80b7b9b5862ea9497cb21d8df39d023486cec1690"
+      url "https://github.com/supabase/dbdev/releases/download/v0.1.7/dbdev-v0.1.7-macos-arm64.tar.gz"
+      sha256 "826cad4edbd665498d03c503230302880dba64a0b893c6750271a9a365aecba9"
 
       def install
         bin.install "dbdev"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/supabase/dbdev/releases/download/v0.1.7/dbdev-v0.1.7-macos-amd64.tar.gz"
-      sha256 "ad6aee6bbc8a2f6d447b90c80b7b9b5862ea9497cb21d8df39d023486cec1690"
+      url "https://github.com/supabase/dbdev/releases/download/v0.1.7/dbdev-v0.1.7-macos-arm64.tar.gz"
+      sha256 "826cad4edbd665498d03c503230302880dba64a0b893c6750271a9a365aecba9"
 
       def install
         bin.install "dbdev"
@@ -29,7 +29,7 @@ class Dbdev < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/supabase/dbdev/releases/download/v0.1.7/dbdev-v0.1.7-linux-arm64.tar.gz"
-      sha256 "26654f66ec42d23d29e0953a84083daa48a9b70c69553b9184ac6a635bcab724"
+      sha256 "5b867c60eaee70b02bdec66543b507817937678b30eb3fa5480cc267130f15b8"
 
       def install
         bin.install "dbdev"
@@ -37,7 +37,7 @@ class Dbdev < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/supabase/dbdev/releases/download/v0.1.7/dbdev-v0.1.7-linux-amd64.tar.gz"
-      sha256 "c67f7477ed6e2ac272207c33c60a9cc839605f6e4edd1187ccad983fb269c106"
+      sha256 "911e66420682cea8d694a75134327daaf069cb686662f16a8e6f9b13c39d67b0"
 
       def install
         bin.install "dbdev"

@@ -25,7 +25,7 @@ class SupabaseBeta < Formula
   end
 
   def install
-    bin.install "supabase" => "supabase-beta"
+    bin.install "supabase" => "supabase"
     bin.install "supabase-go" if File.exist?("supabase-go")
   end
 

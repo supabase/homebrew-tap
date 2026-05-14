@@ -1,26 +1,26 @@
 class SupabaseBeta < Formula
   desc "Supabase CLI"
   homepage "https://supabase.com"
-  version "2.99.0-beta.7"
+  version "2.99.0-beta.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/supabase/cli/releases/download/v2.99.0-beta.7/supabase_2.99.0-beta.7_darwin_arm64.tar.gz"
-      sha256 "b65de551c57c4dec26c24d689a8445a03e241e253c041d3cb44f805feacd0534"
+      url "https://github.com/supabase/cli/releases/download/v2.99.0-beta.8/supabase_2.99.0-beta.8_darwin_arm64.tar.gz"
+      sha256 "efee1461fb7863b5e3dfe673c4885c9048dc84713d8f4b8cf5aaf33236951d72"
     else
-      url "https://github.com/supabase/cli/releases/download/v2.99.0-beta.7/supabase_2.99.0-beta.7_darwin_amd64.tar.gz"
-      sha256 "c9ce036596b35badb46f0b006a8b20343ec9cfd11977c0351668883306b01a9a"
+      url "https://github.com/supabase/cli/releases/download/v2.99.0-beta.8/supabase_2.99.0-beta.8_darwin_amd64.tar.gz"
+      sha256 "1aa400b8055827bf5a047ecff28bb0f5cc9e2772187de9118b2342adfe4d6320"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/supabase/cli/releases/download/v2.99.0-beta.7/supabase_2.99.0-beta.7_linux_arm64.tar.gz"
-      sha256 "b822cc25f1047c27c50b79681d9f686419938c94471e8ec241c5b764ca300caa"
+      url "https://github.com/supabase/cli/releases/download/v2.99.0-beta.8/supabase_2.99.0-beta.8_linux_arm64.tar.gz"
+      sha256 "87ca610861b8b2de00b65fcf239a4bafa1a9d6275947db91748f151f4161ad4f"
     else
-      url "https://github.com/supabase/cli/releases/download/v2.99.0-beta.7/supabase_2.99.0-beta.7_linux_amd64.tar.gz"
-      sha256 "a11254b31f21672195e6cf6eccaa1192ccbcc85969088b7e98ac6eb8a25ebf59"
+      url "https://github.com/supabase/cli/releases/download/v2.99.0-beta.8/supabase_2.99.0-beta.8_linux_amd64.tar.gz"
+      sha256 "1e418eea3919c8925bd1f88de2e6c43d408dab38d2aa161e2d93a61bf5c0ae10"
     end
   end
 

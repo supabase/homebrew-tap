@@ -7,20 +7,20 @@ class SupabaseBeta < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/supabase/cli/releases/download/v2.104.0-beta.3/supabase_2.104.0-beta.3_darwin_arm64.tar.gz"
-      sha256 "6f67e9584f653c23095974523ce1b352aab41bfaed96f223e3a8bb7b2ba96743"
+      sha256 "24967d570ce4db60b0b7636a986374bee08b23f84b5cc26ec5507b3cae6efabe"
     else
       url "https://github.com/supabase/cli/releases/download/v2.104.0-beta.3/supabase_2.104.0-beta.3_darwin_amd64.tar.gz"
-      sha256 "b3e7ae949b69157bdf0dc23532ed06e65fc2ff1ef181e689c19943f2dc7a86d5"
+      sha256 "5dc85fc88c7148d8f11e601a578cd8bc2be796296becf076c8c8b2fe4a6c9c10"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/supabase/cli/releases/download/v2.104.0-beta.3/supabase_2.104.0-beta.3_linux_arm64.tar.gz"
-      sha256 "b564f74496059f6ca16989174e89f5a8c68e99b3d861c57013e5c327443b8f8b"
+      sha256 "4829a6334e160e1b12603f2523255ce2122d55588ab2988267b5666a6b149dbb"
     else
       url "https://github.com/supabase/cli/releases/download/v2.104.0-beta.3/supabase_2.104.0-beta.3_linux_amd64.tar.gz"
-      sha256 "a476b602930ce0bd25ba046bc571dcffd3cb05fa61dcf803b54850e7cc2f3f97"
+      sha256 "bbe8f394121954496add1808f825478e3004601aa19ea12d04f3bf1b0ad3a1d8"
     end
   end
 

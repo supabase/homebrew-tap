@@ -7,20 +7,20 @@ class SupabaseBeta < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/supabase/cli/releases/download/v2.105.0-beta.7/supabase_2.105.0-beta.7_darwin_arm64.tar.gz"
-      sha256 "eecab0a6dc96698f2fedcde8292ad734ec6b003f213a0c68503cfa6c6c94c9a0"
+      sha256 "dd4952dae6ec88a54b365a7d3ef9caf4136b37974c31ce4006b7d51d267b954d"
     else
       url "https://github.com/supabase/cli/releases/download/v2.105.0-beta.7/supabase_2.105.0-beta.7_darwin_amd64.tar.gz"
-      sha256 "1215e77e4618f90c2d0de91429c285fd3781b7e74400e947e01a6584903b11aa"
+      sha256 "e48e1decdc2ec02a5f92273c45b311d67726cc0bb63477fec6f85df0c23d4f5c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/supabase/cli/releases/download/v2.105.0-beta.7/supabase_2.105.0-beta.7_linux_arm64.tar.gz"
-      sha256 "c45b696e38bac447db79b4070533f655bf58acccf8fb77928d6de68386d02ccc"
+      sha256 "bb3fcc3209f53454a2b4784d466a4bcdd9485ce5e273c34a85ff46fc8e2c576f"
     else
       url "https://github.com/supabase/cli/releases/download/v2.105.0-beta.7/supabase_2.105.0-beta.7_linux_amd64.tar.gz"
-      sha256 "9d2eeef1b1791ef3cb62789f8fb874ebec3acaa4b1ff966c1b9af157a2d93560"
+      sha256 "422cea25d47b7157cb9567ff5a2df16f76fd80be5527c29c458176f2f1446606"
     end
   end
 

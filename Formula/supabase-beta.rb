@@ -7,20 +7,20 @@ class SupabaseBeta < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/supabase/cli/releases/download/v2.106.0-beta.22/supabase_2.106.0-beta.22_darwin_arm64.tar.gz"
-      sha256 "157335f6bff1bfb99d2a7040c67688d103530bc59a0f5465caf918dbd2471902"
+      sha256 "35a6cfa65a8495ebf9d461dadfdf25305046fb5cfe8be8ae75aea89869f94d6a"
     else
       url "https://github.com/supabase/cli/releases/download/v2.106.0-beta.22/supabase_2.106.0-beta.22_darwin_amd64.tar.gz"
-      sha256 "56279254c32617354031a93760b4a6061797295b963502875bf759cf8d730e31"
+      sha256 "b62a1432f198ba259034d18f15e3f325e7ece220c741ce985a331553abc4fe90"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/supabase/cli/releases/download/v2.106.0-beta.22/supabase_2.106.0-beta.22_linux_arm64.tar.gz"
-      sha256 "b8ca92a190f09632c1f7ffeb15f5494b6f9e352f04b016d66ceb80f8970b8995"
+      sha256 "10d738fe6671c530c4943e8612e4822a0201f46c1e27d38a6bb4242a21d40b22"
     else
       url "https://github.com/supabase/cli/releases/download/v2.106.0-beta.22/supabase_2.106.0-beta.22_linux_amd64.tar.gz"
-      sha256 "fd743319adff9fb65a853990c5afe6cb421c3c8fedac02d1282e5a5c457a8851"
+      sha256 "da7a93d7ba3254fc5c1f04ce30782a4d39a97934b41993d41cddfb6f7e6073cd"
     end
   end
 

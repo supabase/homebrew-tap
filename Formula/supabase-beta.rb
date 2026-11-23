@@ -1,26 +1,26 @@
 class SupabaseBeta < Formula
   desc "Supabase CLI"
   homepage "https://supabase.com"
-  version "3.4.0-beta.3"
+  version "3.4.0-beta.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/supabase/cli/releases/download/v3.4.0-beta.3/supabase_3.4.0-beta.3_darwin_arm64.tar.gz"
-      sha256 "970a35883377beebb6641c9b03f1d7962fc334708c75c670dcc0290d4e0146b7"
+      url "https://github.com/supabase/cli/releases/download/v3.4.0-beta.4/supabase_3.4.0-beta.4_darwin_arm64.tar.gz"
+      sha256 "3f7c93d0a499fa414330d98c63ffdfbf4f46493a0cc1bff0f2e33e9b5ef39bfd"
     else
-      url "https://github.com/supabase/cli/releases/download/v3.4.0-beta.3/supabase_3.4.0-beta.3_darwin_amd64.tar.gz"
-      sha256 "a385c608d3e12f88950aec23ce0163ca7e08a0ccf24b4c1d48180bce61bb6511"
+      url "https://github.com/supabase/cli/releases/download/v3.4.0-beta.4/supabase_3.4.0-beta.4_darwin_amd64.tar.gz"
+      sha256 "f10ca7c65ca652ef51930df90b81c6711d6814bea66065f0a85381fcd34996d2"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/supabase/cli/releases/download/v3.4.0-beta.3/supabase_3.4.0-beta.3_linux_arm64.tar.gz"
-      sha256 "c572ef168da45dd1a69bc44679e160d2536dc5cfc9d01007989b63e40d6e999b"
+      url "https://github.com/supabase/cli/releases/download/v3.4.0-beta.4/supabase_3.4.0-beta.4_linux_arm64.tar.gz"
+      sha256 "247c38037c5c9a1d8b751b0e275f79c49b5fafa1fcbe887a1758242bcf0d8f4a"
     else
-      url "https://github.com/supabase/cli/releases/download/v3.4.0-beta.3/supabase_3.4.0-beta.3_linux_amd64.tar.gz"
-      sha256 "810bb1a674a3efb4163a17e2ddeb4c08285da45b3f752823e556f0c67da714e9"
+      url "https://github.com/supabase/cli/releases/download/v3.4.0-beta.4/supabase_3.4.0-beta.4_linux_amd64.tar.gz"
+      sha256 "d66449eaaedc3660f3bc18e28b56856e5da385e0034145e360cf3f0d1a85f0ae"
     end
   end
 
